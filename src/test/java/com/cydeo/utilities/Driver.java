@@ -118,7 +118,7 @@ public class Driver {
                         URL url = new URL("https://oauth-sdetoscar-844c8:66e7117f-390e-4556-8105-07af96a01f7a@ondemand.eu-central-1.saucelabs.com:443/wd/hub");
                         driverPool.set(new RemoteWebDriver(url,browserOptions));
                         driverPool.get().manage().window().maximize();
-                        driverPool.get().manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+                        driverPool.get().manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
                     } catch (MalformedURLException e) {
                         e.printStackTrace();
                     }
