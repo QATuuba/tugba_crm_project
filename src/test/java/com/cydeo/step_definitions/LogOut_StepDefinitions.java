@@ -59,4 +59,8 @@ public class LogOut_StepDefinitions {
     }
 
 
+    @When("user closes all open browsers")
+    public void user_closes_all_open_browsers() {
+        Driver.closeDriver();
+    }
 }

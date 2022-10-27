@@ -46,3 +46,23 @@ Feature: CRM application logout feature
       | helpdesk41@cybertekschool.com  | UserUser |
       | marketing54@cybertekschool.com | UserUser |
       | marketing69@cybertekschool.com | UserUser |
+
+  @ac3
+  Scenario Outline: User should be logged out if the user closes the open browsers
+    When user enters username "<username>"
+    When user enters password "<password>"
+    When user clicks the Login Button
+    When user sees Activity Stream page
+    When user closes all open browsers
+    When user is on the login page
+    Then user does not see Activity Stream page
+
+
+    Examples:
+      | username                        | password |
+      | hr73@cybertekschool.com         | UserUser |
+      | hr86@cybertekschool.com         | UserUser |
+      | helpdesk97@cybertekschool.com   | UserUser |
+      | helpdesk100@cybertekschool.com  | UserUser |
+      | marketing5@cybertekschool.com   | UserUser |
+      | marketing101@cybertekschool.com | UserUser |
