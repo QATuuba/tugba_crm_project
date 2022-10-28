@@ -27,7 +27,7 @@ Feature: CRM application logout feature
       | marketing34@cybertekschool.com | UserUser |
 
   @ac2
-  Scenario Template: user can not go to the home page
+  Scenario Template: User can not go to the home page
   again by clicking the step back button after successfully logging out
     When user enters username "<username>"
     When user enters password "<password>"

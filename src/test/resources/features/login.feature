@@ -70,7 +70,7 @@ Feature:CRM application login feature
 
 
   @invalid
-  Scenario Outline: should not be able to login with invalid credentials
+  Scenario Outline: User should not be able to login with invalid credentials
     When user enters invalid username  "<invalid username>"
     When user enters invalid password "<invalid password>"
     When user clicks the Log In Button
