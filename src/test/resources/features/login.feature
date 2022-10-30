@@ -13,7 +13,7 @@ Feature:CRM application login feature
     When user enters HR username "<HR username>"
     When user enters HR password "<HR password>"
     When user clicks the Log In Button
-    Then user sees the Activity Stream page
+    Then user should see the Activity Stream page
 
     Examples:
       | HR username             | HR password |
@@ -33,7 +33,7 @@ Feature:CRM application login feature
     When user enters helpdesk username "<Helpdesk username>"
     When user enters helpdesk password "<Helpdesk password>"
     When user clicks the Log In Button
-    Then user sees the Activity Stream page
+    Then user should see the Activity Stream page
 
     Examples:
       | Helpdesk username             | Helpdesk password |
@@ -53,7 +53,7 @@ Feature:CRM application login feature
     When user enters marketing username "<Marketing username>"
     When user enters marketing password "<Marketing password>"
     When user clicks the Log In Button
-    Then user sees the Activity Stream page
+    Then user should see the Activity Stream page
 
     Examples:
       | Marketing username             | Marketing password |
@@ -74,7 +74,7 @@ Feature:CRM application login feature
     When user enters invalid username  "<invalid username>"
     When user enters invalid password "<invalid password>"
     When user clicks the Log In Button
-    Then user does not see the Activity Stream page
+    Then user should not see the Activity Stream page
 
     Examples:
       | invalid username               | invalid password |

@@ -39,8 +39,8 @@ public class LogOut_StepDefinitions {
         activityStreamPage.userBlockMenu.click();
         activityStreamPage.logOutButton.click();
     }
-    @Then("user sees Login page")
-    public void user_sees_login_page() {
+    @Then("user should see Login page")
+    public void user_should_see_login_page() {
         String loginPageTitle = Driver.getDriver().getTitle();
         String expectedTitle = "Authorization";
         Assert.assertEquals(expectedTitle, loginPageTitle);
@@ -50,8 +50,8 @@ public class LogOut_StepDefinitions {
     public void user_clicks_step_back_button() {
         Driver.getDriver().navigate().back();
     }
-    @Then("user does not see Activity Stream page")
-    public void user_does_not_see_activity_stream_page() {
+    @Then("user should not see Activity Stream page")
+    public void user_should_not_see_activity_stream_page() {
         String loginPageTitle = Driver.getDriver().getTitle();
         String expectedTitle = "Authorization";
         Assert.assertEquals(expectedTitle, loginPageTitle);
@@ -62,5 +62,12 @@ public class LogOut_StepDefinitions {
     @When("user closes all open browsers")
     public void user_closes_all_open_browsers() {
         Driver.closeDriver();
+    }
+
+    @When("user sees Login page")
+    public void user_sees_login_page() {
+        String loginPageTitle = Driver.getDriver().getTitle();
+        String expectedTitle = "Authorization";
+        Assert.assertEquals(expectedTitle, loginPageTitle);
     }
 }

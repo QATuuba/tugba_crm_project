@@ -15,7 +15,7 @@ Feature: CRM application logout feature
     When user clicks the Login Button
     When user sees Activity Stream page
     When user clicks the Log out button
-    Then user sees Login page
+    Then user should see Login page
 
     Examples:
       | username                       | password |
@@ -36,7 +36,7 @@ Feature: CRM application logout feature
     When user clicks the Log out button
     When user sees Login page
     When user clicks step back button
-    Then user does not see Activity Stream page
+    Then user should not see Activity Stream page
 
     Examples:
       | username                       | password |
@@ -55,7 +55,7 @@ Feature: CRM application logout feature
     When user sees Activity Stream page
     When user closes all open browsers
     When user is on the login page
-    Then user does not see Activity Stream page
+    Then user should not see Activity Stream page
 
 
     Examples:

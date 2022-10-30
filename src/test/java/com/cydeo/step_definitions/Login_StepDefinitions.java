@@ -32,8 +32,8 @@ public class Login_StepDefinitions {
     public void user_clicks_the_log_in_button() {
         loginPage.loginButton.click();
     }
-    @Then("user sees the Activity Stream page")
-    public void user_sees_the_activity_stream_page() {
+    @Then("user should see the Activity Stream page")
+    public void user_should_see_the_activity_stream_page() {
         WebDriverWait wait = new WebDriverWait(Driver.getDriver(), 10);
         wait.until(ExpectedConditions.visibilityOf(activityStreamPage.activityStreamPageTitle));
         String actualTitle = Driver.getDriver().getTitle();
@@ -69,8 +69,8 @@ public class Login_StepDefinitions {
     public void user_enters_invalid_password(String string) {
         loginPage.inputPassword.sendKeys(string);
     }
-    @Then("user does not see the Activity Stream page")
-    public void user_does_not_see_the_activity_stream_page() {
+    @Then("user should not see the Activity Stream page")
+    public void user_should_not_see_the_activity_stream_page() {
         String loginPageTitle = Driver.getDriver().getTitle();
         String expectedTitle = "Authorization";
         Assert.assertTrue(expectedTitle.equals(loginPageTitle));
