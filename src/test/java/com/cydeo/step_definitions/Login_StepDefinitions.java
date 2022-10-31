@@ -39,7 +39,7 @@ public class Login_StepDefinitions {
         String actualTitle = Driver.getDriver().getTitle();
         //String actualPageTitle = activityStreamPage.activityStreamPageTitle.getText();
         //Assert.assertTrue(actualPageTitle.equals("Activity Stream"));
-        Assert.assertTrue(actualTitle.contains("Portal"));
+        Assert.assertTrue(actualTitle.contains("Portal")||actualTitle.contains("EULA"));
         Driver.closeDriver();
     }
 

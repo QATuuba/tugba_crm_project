@@ -1,4 +1,4 @@
-@login
+@AGLP-1574
 Feature:CRM application login feature
   Agile story: As a user, I should be able to login with correct credentials to different
   accounts. And Activity Stream page should be displayed.
@@ -8,7 +8,7 @@ Feature:CRM application login feature
   Background: For this scenarios in the feature file, user is expected to be on the login page
     Given user is on the login page
 
-  @HR
+  @AGLP-1523
   Scenario Outline: Login as HR user with Valid Credentials
     When user enters HR username "<HR username>"
     When user enters HR password "<HR password>"
@@ -21,14 +21,14 @@ Feature:CRM application login feature
       | hr10@cybertekschool.com | UserUser    |
       | hr20@cybertekschool.com | UserUser    |
       | hr30@cybertekschool.com | UserUser    |
-      | hr40@cybertekschool.com | UserUser    |
+      | hr42@cybertekschool.com | UserUser    |
       | hr50@cybertekschool.com | UserUser    |
       | hr60@cybertekschool.com | UserUser    |
       | hr70@cybertekschool.com | UserUser    |
       | hr80@cybertekschool.com | UserUser    |
       | hr90@cybertekschool.com | UserUser    |
 
-  @helpdesk
+  @AGLP-1525
   Scenario Outline: Login as Helpdesk user with Valid Credentials
     When user enters helpdesk username "<Helpdesk username>"
     When user enters helpdesk password "<Helpdesk password>"
@@ -41,14 +41,14 @@ Feature:CRM application login feature
       | helpdesk10@cybertekschool.com | UserUser          |
       | helpdesk20@cybertekschool.com | UserUser          |
       | helpdesk30@cybertekschool.com | UserUser          |
-      | helpdesk40@cybertekschool.com | UserUser          |
+      | helpdesk42@cybertekschool.com | UserUser          |
       | helpdesk50@cybertekschool.com | UserUser          |
       | helpdesk60@cybertekschool.com | UserUser          |
       | helpdesk70@cybertekschool.com | UserUser          |
       | helpdesk80@cybertekschool.com | UserUser          |
-      | helpdesk90@cybertekschool.com | UserUser          |
+      | helpdesk92@cybertekschool.com | UserUser          |
 
-  @marketing
+  @AGLP-1526
   Scenario Outline: Login as Marketing user with Valid Credentials
     When user enters marketing username "<Marketing username>"
     When user enters marketing password "<Marketing password>"
@@ -69,7 +69,7 @@ Feature:CRM application login feature
       | marketing90@cybertekschool.com | UserUser           |
 
 
-  @invalid
+  @AGLP-1527
   Scenario Outline: User should not be able to login with invalid credentials
     When user enters invalid username  "<invalid username>"
     When user enters invalid password "<invalid password>"

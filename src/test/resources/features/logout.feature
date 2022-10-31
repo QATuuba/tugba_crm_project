@@ -1,4 +1,4 @@
-@logout
+@AGLP-1575
 Feature: CRM application logout feature
   Agile Story: As a user, I should be able to log out,
   and "Log In" page should be displayed.
@@ -8,7 +8,7 @@ Feature: CRM application logout feature
   Background: For this scenarios in the feature file, user is expected to be on the login page
     Given user is on the login page
 
-  @ac1
+  @AGLP-1528
   Scenario Outline: Log out and ends up on the login page
     When user enters username "<username>"
     When user enters password "<password>"
@@ -26,9 +26,8 @@ Feature: CRM application logout feature
       | marketing78@cybertekschool.com | UserUser |
       | marketing34@cybertekschool.com | UserUser |
 
-  @ac2
-  Scenario Template: User can not go to the home page
-  again by clicking the step back button after successfully logging out
+  @AGLP-1530
+  Scenario Template: User can not go to the home page again by clicking the step back button after successfully logging out
     When user enters username "<username>"
     When user enters password "<password>"
     When user clicks the Log In Button
@@ -47,7 +46,7 @@ Feature: CRM application logout feature
       | marketing54@cybertekschool.com | UserUser |
       | marketing69@cybertekschool.com | UserUser |
 
-  @ac3
+  @AGLP-1531
   Scenario Outline: User should be logged out if the user closes the open browsers
     When user enters username "<username>"
     When user enters password "<password>"

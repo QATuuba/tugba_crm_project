@@ -2,6 +2,7 @@ package com.cydeo.step_definitions;
 
 import com.cydeo.pages.ActivityStreamPage;
 import com.cydeo.pages.LoginPage;
+import com.cydeo.utilities.BrowserUtilities;
 import com.cydeo.utilities.Driver;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
@@ -32,10 +33,13 @@ public class LogOut_StepDefinitions {
         WebDriverWait wait = new WebDriverWait(Driver.getDriver(), 10);
         wait.until(ExpectedConditions.visibilityOf(activityStreamPage.activityStreamPageTitle));
         String actualTitle = Driver.getDriver().getTitle();
-        Assert.assertTrue(actualTitle.contains("Portal"));
+        Assert.assertTrue(actualTitle.contains("Portal")||actualTitle.contains("EULA"));
     }
     @When("user clicks the Log out button")
     public void user_clicks_the_log_out_button() {
+        //WebDriverWait wait = new WebDriverWait(Driver.getDriver(), 10);
+        //wait.until(ExpectedConditions.visibilityOf(activityStreamPage.userBlockMenu));
+        BrowserUtilities.sleep(8);
         activityStreamPage.userBlockMenu.click();
         activityStreamPage.logOutButton.click();
     }
@@ -44,6 +48,7 @@ public class LogOut_StepDefinitions {
         String loginPageTitle = Driver.getDriver().getTitle();
         String expectedTitle = "Authorization";
         Assert.assertEquals(expectedTitle, loginPageTitle);
+        Driver.closeDriver();
     }
 
     @When("user clicks step back button")
